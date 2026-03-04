@@ -7,6 +7,7 @@ data:
     <html>
     <body>
       <h1>Hello World from k3s!</h1>
+     <p> this is my first k3s project</p>
     </body>
     </html>
 ---
