@@ -1,0 +1,22 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check index.html exists
+        run: |
+          if [ -f nginx/index.html ]; then
+            echo "index.html found"
+          else
+            echo "index.html is missing!"
+            exit 1
+          fi
