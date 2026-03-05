@@ -1,0 +1,9 @@
+resources:
+  - deployment.yaml
+
+configMapGenerator:
+  - name: nginx-html
+    files:
+      - index.html
+    options:
+      disableNameSuffixHash: true
